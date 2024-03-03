@@ -3,11 +3,13 @@ import { Outlet } from "react-router-dom"
 import Header from "./Header"
 
 export default function Layout() {
+    const [cart, setCart] = React.useState([]);
+
     return (
         <>
-            <Header />
+            <Header cart={cart} />
             <div id="main">
-                <Outlet />
+                <Outlet context={[cart, setCart]} />
             </div>
         </>
     );

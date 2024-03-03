@@ -1,14 +1,11 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-
-/*
-    * get the quantity from the "form"
-    * add it to the cart, keep it updated
-*/
+import { useParams, useOutletContext } from "react-router-dom";
 
 export default function ProductDetail() {
     const params = useParams();
+    const [cart, setCart] = useOutletContext();
     const [product, setProduct] = React.useState({});
+    const [quantity, setQuantity] = React.useState(0);
 
     React.useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${params.id}`)
@@ -17,6 +14,21 @@ export default function ProductDetail() {
                 setProduct(json);
             });
     }, []);
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setCart(prevCart => [
+            ...prevCart,
+            {
+                product: product,
+                quantity: quantity
+            }
+        ]);
+    }
+
+    function handleChange(e) {
+        setQuantity(e.target.value);
+    }
 
     return (
         <div className="product-detail">
@@ -28,8 +40,10 @@ export default function ProductDetail() {
                     <i className="fa fa-star" style={{ color: '#f8cc2c', fontSize: '24px' }}></i>
                     <strong>{product.rating && product.rating.rate}</strong>/10
                 </p>
-                <input type="number" name="quantity" defaultValue={1} min="1" />
-                <button>Add to cart</button>
+                <form onSubmit={handleSubmit}>
+                    <input type="number" name="quantity" min="1" value={quantity} onChange={handleChange} />
+                    <button>Add to cart</button>
+                </form>
             </div>
             <div className="product-detail-description">
                 <strong>Description:</strong>

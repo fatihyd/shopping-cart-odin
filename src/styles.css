@@ -122,3 +122,28 @@ button {
   border-radius: 5px;
   font-size: medium;
 }
+
+.cart-item {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+}
+
+.cart-item img {
+  width: 200px;
+  height: 200px;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 768px) {
+  .products.container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
