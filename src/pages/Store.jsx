@@ -19,6 +19,7 @@ export default function Store() {
                     products.map(product => (
                         <ProductCard
                             key={product.id}
+                            id={product.id}
                             imageURL={product.image}
                             title={product.title.split(' ').slice(0, 3).join(' ')}
                             price={product.price}

@@ -58,3 +58,67 @@ header a:hover {
   margin-left: 50px;
   margin-right: 50px;
 }
+
+.product-detail img {
+  width: 300px;
+  height: 300px;
+}
+
+input[type="number"] {
+  width: 70px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: large;
+}
+
+.product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  width: 50%;
+  justify-self: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-detail img {
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+}
+
+.product-detail-detail {
+  border: 1px solid #E2E8F0;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.product-detail-description {
+  border-top: 1px solid #E2E8F0;
+  padding-top: 10px;
+}
+
+.product-detail div {
+  margin: 50px;
+}
+
+button {
+  border: none;
+  background-color: #176d65;
+  color: white;
+  padding: 12.5px 25px;
+  border-radius: 5px;
+  font-size: medium;
+}
