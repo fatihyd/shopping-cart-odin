@@ -41,7 +41,13 @@ export default function ProductDetail() {
                     <strong>{product.rating && product.rating.rate}</strong>/10
                 </p>
                 <form onSubmit={handleSubmit}>
-                    <input type="number" name="quantity" min="1" value={quantity} onChange={handleChange} />
+                    <input
+                        type="number"
+                        name="quantity"
+                        min="1"
+                        value={quantity}
+                        onChange={handleChange}
+                    />
                     <button>Add to cart</button>
                 </form>
             </div>

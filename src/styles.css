@@ -93,7 +93,8 @@ input[type="number"] {
   align-items: center;
 }
 
-.product-detail img {
+.product-detail img,
+.cart-item img {
   padding: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
@@ -146,4 +147,12 @@ button:active {
   .products-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.remove-item {
+  background-color: red;
+}
+
+.cart-item img {
+  margin-right: 20px;
 }

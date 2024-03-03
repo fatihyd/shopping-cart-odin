@@ -1,5 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 export default function Home() {
-    return <h1>Home page goes here</h1>
+    return (
+        <>
+            <h1>Welcome to the store!</h1>
+            <button>
+                <Link to="store">Shop now</Link>
+            </button>
+        </>
+    );
 }
