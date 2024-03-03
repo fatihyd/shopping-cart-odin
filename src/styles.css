@@ -30,3 +30,31 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+}
+
+.product-card {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+}
+
+.product-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 40px #176d65;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-left: 50px;
+  margin-right: 50px;
+}
