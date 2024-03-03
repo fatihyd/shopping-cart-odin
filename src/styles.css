@@ -156,3 +156,17 @@ button:active {
 .cart-item img {
   margin-right: 20px;
 }
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.home-container a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
